@@ -1,0 +1,94 @@
+.promo {
+	background: #61b1b4;
+	margin-bottom: 112px;
+}
+
+.slider__title {
+	position: absolute;
+	top:50%;
+	color: $white;
+}
+
+.title {
+	position: relative;
+	font-size: 36px;
+	letter-spacing: 6px;
+	color: $blue;
+	font-family: $font-roman;
+	margin-bottom: 60px;
+	text-transform: uppercase;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -22px;
+		left: 0;
+		width: 140px;
+		height: 3px;
+		background:$grey;
+	}
+}
+.projects {
+	margin-bottom: 105px;
+}
+
+.projects__list {
+	font-size: 0;
+}
+
+.projects__item {
+	@include inlineblock();
+	max-width: 300px;
+	margin:0 0 25px 20px;
+
+	&:first-child {
+		margin-left: 0;
+	} 
+}
+.projects__link {
+	display: block;
+	margin-bottom: 15px;
+	background: $grey;
+	min-height: 180px;
+}
+
+.projects__item-title {
+	font-size: 18px;
+	font-family: $font-bold;
+	margin-bottom: 10px;
+}
+
+.projects__item-desc {
+	-moz-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+	font-size: 14px;
+	font-family: $font-light;
+}
+
+.projects__text {
+	font-size: 14px;
+	line-height: 18px;
+	font: $font-light;
+}
+
+.map {
+	height: 295px;
+	background: url(../img/bg/map.jpg) center no-repeat $grey;
+	background-size: cover;
+}
+
+.map__wrap {
+	height: 100%;
+	position: relative;
+	background: $blue;
+	opacity: .9;
+}
+
+.map__title {
+	@include transform;
+	color: $white;
+	font-size: 48px;
+	font-family: $font-bold; 
+}

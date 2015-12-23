@@ -1,0 +1,24 @@
+//- List generator item_active
+mixin ul(className, items, activeElem, onlyList)
+	if(onlyList)
+		ul(class= className + '__list')
+			each item, index in items
+				li(class= className + "__item" + ((activeElem === index) ? ' ' + className + '__item_active' : ''))
+					a(href="#" class= className + "__link")= item
+	else
+		nav(class= className)
+			ul(class= className + '__list')
+				each item, index in items
+					li(class= className + "__item")
+						a(href="#" title='#{item}' class= className + "__link" + ((activeElem === index) ? ' ' + className + '__link_active' : ''))= item
+
+//- Gallery list generator
+mixin img-list(className, items, format, alt)
+	ul(class= className + '__list')
+		- var index = 1;
+		- for (item in items)
+			li(class= className + '__item')
+				a(href="#" target="_blank" class= className + '__link')
+					img(src="img/photo/projects/img_" + (index++) + "." + format class= className + '__link-img' alt='#{item}')
+				h3(class= className + '__item-title')= item
+				div(class= className + '__item-desc')= options[item]

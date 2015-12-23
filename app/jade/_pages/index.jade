@@ -1,0 +1,40 @@
+extends ../main
+
+block title
+	| Главная
+
+block content
+	.promo
+		ul.slider
+			li.slider__item
+				img(src="img/photo/slider/city.jpg" alt="Image").slider__img
+				.container
+					.slider__title
+						h2.slider__title-text Название
+			li.slider__item
+				img(src="img/photo/slider/railway.jpg" alt="Image").slider__img
+				.container
+					.slider__title
+						h2.slider__title-text Название
+			li.slider__item
+				img(src="img/photo/slider/city.jpg" alt="Image").slider__img
+				.container
+					.slider__title
+						h2.slider__title-text Название
+			li.slider__item
+				img(src="img/photo/slider/railway.jpg" alt="Image").slider__img
+				.container
+					.slider__title					
+						h2.slider__title-text Название
+	main(role="main").maincontent				
+		section.projects
+			.container
+				h2.title Наши проекты
+				+img-list("projects", options, "jpg", Проекты)
+				p.projects__text
+					| Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развитиясоздание форм развития.
+		section.map
+			.map__wrap
+				.map__title 15 лет на благо России
+
+			

@@ -1,0 +1,109 @@
+.header {
+	background: $blue;
+	height: 247px;
+	position: relative;
+}
+
+.header__top {
+	background-color: $white;
+	margin-top: 6px;
+	padding-top: 44px;
+	height: 180px;
+	width: 100%;
+	position: absolute;
+	box-sizing: border-box;
+
+	.container {
+		width: 1039px;
+		@include clearfix;
+	}
+}
+
+.header__bottom {
+	position: absolute;
+	bottom:0px;
+	width: 100%;
+}
+.header__left {
+	float:left;
+}
+
+.logo {
+	display: block;
+}
+
+.logo__img {
+	display: block;
+	max-width: 289px;
+}
+
+.logo__text {
+	position: absolute;
+	top:0;
+	left: -99999px;
+}
+
+.header__right {
+	float: right;
+}
+
+.header__title {
+	max-width: 670px;
+	font-family: $font-black;
+	color: $blue;
+	text-transform: uppercase;
+}
+
+.header__title-top {
+	letter-spacing: 5px;
+	font-size: 29px;
+	line-height: 36px;
+}
+
+.header__title-bottom {
+	font-size: 32px;
+	line-height: 56px;
+}
+
+.navigation__list {
+	height: 60px;
+	margin: 0 60px;
+	text-align: justify;
+
+	&:after {
+		content:'';
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+.navigation__item {
+	@include inlineblock(middle);
+	position: relative;
+
+	&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top:27px;
+			left: -60px;
+			background-color: $white;
+			width: 6px;
+			height: 6px;
+			@include border-radius(50%);	
+		}
+
+	&:first-child:before {
+			display: none;
+	}	
+}
+
+.navigation__link {
+	line-height: 60px;
+	display: block;
+	color: $white;
+	font-size: 18px;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+
