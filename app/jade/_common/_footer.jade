@@ -5,8 +5,8 @@ footer.footer
 				a(href="#" title="На главную").logo.logo_footer
 					img(src="../img/logo/logo_footer.svg" alt="Нева-AТС").logo__img.logo__img_footer
 					span.logo__text Транспортное строительство
-			.footer__right		
-				+ul('footer-nav', navigation, -1, true)
+			.footer__right
+				+ul('nav-top', navigation, -1, true)
 	.footer__main
 		.footer__contacts
 			.container
@@ -28,4 +28,21 @@ footer.footer
 		#footer__map
 	.footer__bottom
 		.container
-			.footer__copyright All rights reserved. 2015. no copy alowed
+			.footer__left
+				- var menu = ['Главная', 'Наши проекты', 'Контакты']
+				ul.nav-bottom__list
+					each item in menu
+						li.nav-bottom__item
+							a(href="#").footer-bottom__link= item
+				.copyright
+					a(href="#" title="Перейти").copyright__link-rts
+					a(href="#" title="На главную").copyright__link-neva
+					span.copyright__text 2015 - Нева АТС
+				.trademark Официальный сайт компании "Нева-АТС"
+			.footer__right
+				form(action="#" method="get").form
+					input(type="seach" name="seach" placeholder="Поиск...").form__input
+					input(type="submit" value="Найти").form__submit
+						
+							
+			

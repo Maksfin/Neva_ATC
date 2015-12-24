@@ -19,7 +19,7 @@
 	max-width: 185px;
 }
 
-.footer-nav__list {
+.nav-top__list {
 	width: 676px;
 	margin: 0 23px 0 50px;
 	text-align: justify;
@@ -32,11 +32,11 @@
 	}
 }
 
-.footer-nav__item {
+.nav-top__item {
 	@include inlineblock(middle);
 }
 
-.footer-nav__link {
+.nav-top__link {
 	display: block;
 	color: $black;
 	font-size: 18px;
@@ -124,4 +124,8 @@
 	float: right;
 	width: 50%;
 	height: 100%;
+}
+
+.nav-bottom__item {
+	@include inlineblock(middle);
 }
