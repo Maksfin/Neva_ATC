@@ -1,3 +1,7 @@
+.footer {
+	color: $white;
+}
+
 .footer__header {
 	border-top: 4px solid $blue;
 	background: $white;
@@ -47,8 +51,8 @@
 .footer__main {
 	height: 472px;
 	@include clearfix;
-	color: $white;
 }
+
 .footer__contacts {
 	float: left;
 	width: 50%;
@@ -128,4 +132,81 @@
 
 .nav-bottom__item {
 	@include inlineblock(middle);
+	margin-left: 35px;
+	margin-bottom: 18px;
+
+	&:first-child {
+		margin-left: 0;
+	}
 }
+
+.footer__bottom {
+	background: #111111;
+	min-height:  147px;
+	font-family: $font-light;
+	.container {
+		@include clearfix;
+	}
+}
+
+.footer-bottom__link {
+	font-size: 18px;
+	color: $white;
+	text-decoration: none;
+	@include transition(.3s);
+
+	&:hover {
+		border-bottom: 1px solid $white;
+	}
+}
+
+.copyright__link-rts {
+	@include inlineblock;
+	text-indent: -9999px;
+	@include get-sprite($general-sprite, rtc_extra-small);
+
+}
+.copyright__link-neva {
+	@include inlineblock;
+	text-indent: -9999px;
+	margin-left: 38px;
+	@include get-sprite($general-sprite, logo_extra-small);
+}
+
+.copyright__text {
+	margin-left: 58px;
+	@include inlineblock;
+	padding-top: 7px;
+}
+
+.footer__right {
+	padding-top: 50px;
+}
+
+.form__input {
+	height: 31px;
+	box-sizing: border-box;
+	color: $black;
+	padding: 0 10px;
+	font-size: 16px;
+	width: 200px;
+	border: 1px solid $blue;
+	margin-right: -8px;
+	overflow: hidden;
+	@include inlineblock;
+	@include border-radius(2px);
+}
+
+.form__submit {
+	width: 100px;
+	height: 31px;
+	@include inlineblock;
+	@include Gradient($blue, #1c265a, 90deg);
+	border:1px solid $blue;
+	@include border-radius(2px);
+	overflow: hidden;
+	font-family: $font-bold;
+	text-transform: uppercase;
+}
+
+

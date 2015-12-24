@@ -27,7 +27,7 @@
   @include border-radius(3px);
   overflow: hidden;
   @include box-shadow (0px -1px 0px 0px #f1f2f2);
-  @include linearGradient (rgb( 233, 231, 231 ), rgb( 251, 249, 249 ), 90deg);
+  @include Gradient (rgb( 233, 231, 231 ), rgb( 251, 249, 249 ), 90deg);
   font-size: $font-size_main + 2px;
   @include placeholder( 0px);
 }

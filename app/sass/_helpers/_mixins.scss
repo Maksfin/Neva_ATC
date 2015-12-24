@@ -142,7 +142,7 @@
   }
 }
 
-@mixin linearGradient($top, $bottom, $offset: top){
+@mixin Gradient($top, $bottom, $offset: top){
     background: $top; /* Old browsers */
     background: -moz-linear-gradient($offset,  $top 0%, $bottom 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
