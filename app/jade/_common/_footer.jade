@@ -1,17 +1,31 @@
 footer.footer
-	.footer__top
-		.container 
+	.footer__header
+		.container
 			.footer__left
-				a(href="#" title="COOLTECH").logo.logo_footer
-					img(src="../img/logo/logo_footer.png" alt="COOLTECH").logo__img
-					span.logo__text COOLTECH
-			.footer__right
-				.footer__right-wrap
-					ul.socials.socials_footer
-						each social in socials
-							li(class="socials__item socials__item_" + social)
-								a(href="#").socials__link= social
+				a(href="#" title="На главную").logo.logo_footer
+					img(src="../img/logo/logo_footer.svg" alt="Нева-AТС").logo__img.logo__img_footer
+					span.logo__text Транспортное строительство
+			.footer__right		
 				+ul('footer-nav', navigation, -1, true)
+	.footer__main
+		.footer__contacts
+			.container
+				address.address
+					.address__phone
+						span.address__phone-text Тел.:
+						a(href="tel:+78125726240" title="Позвонить нам").address__phone-link +7 (812) 572 62 40
+					.address__phone
+						span.address__phone-text  Факс:
+						a(href="tel:+78125726248" title="Отправить факс").address__phone-link +7 (812) 572 62 48
+					.address__city
+						| 190031 Россия  город Санкт-Петербург Набережная реки Фонтанки дом 85 помещение 21Н литер А
+					a(href="mailto:info@neva-ats.ru" title="Написать нам").address__mail info@neva-ats.ru
+				.info
+					a(href="#" target="_blank" title="Перейти на сайт").info__link-img
+					.info__text CK ИСО 9001
+					a(href="#" target="_blank" title="Перейти").info__link-text Информация обязательная к публикации
+					a(href="#" target="_blank" title="Перейти").info__link-text Политика конфиденциальности
+		#footer__map
 	.footer__bottom
 		.container
 			.footer__copyright All rights reserved. 2015. no copy alowed

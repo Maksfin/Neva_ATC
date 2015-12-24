@@ -4,7 +4,7 @@ html, body {
 	height:100%;
 }
 body {
-	font: $base-font-size $font-main;
+	font: $base-font-size $font-roman;
 	background-color: $bgcolor;
 	color: $black;
 	-webkit-font-smoothing: antialiased;
@@ -60,3 +60,12 @@ p, h1, h2, h3, h4, h5, h6 {
     font:$base-font-size Verdana, sans-serif;
 }
 
+img {
+	display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+address {
+	font-style: normal;
+}

@@ -11,6 +11,7 @@
 
 .title {
 	position: relative;
+	display: inline-block;
 	font-size: 36px;
 	letter-spacing: 6px;
 	color: $blue;
@@ -63,20 +64,19 @@
 	-moz-hyphens: auto;
    -webkit-hyphens: auto;
    -ms-hyphens: auto;
-	font-size: 14px;
 	font-family: $font-light;
 }
 
 .projects__text {
-	font-size: 14px;
 	line-height: 18px;
-	font: $font-light;
+	font-family: $font-light;
 }
 
 .map {
 	height: 295px;
-	background: url(../img/bg/map.jpg) center no-repeat $grey;
+	background: url(../img/bg/map.jpg) no-repeat $grey;
 	background-size: cover;
+	margin-bottom: 110px;
 }
 
 .map__wrap {
@@ -91,4 +91,20 @@
 	color: $white;
 	font-size: 48px;
 	font-family: $font-bold; 
+}
+.about-company {
+	margin-bottom: 130px;
+}
+
+.about-company__text {
+	margin-top: 20px;
+	line-height: 18px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.about-company__text-bold {
+	font-family: $font-bold;
 }
