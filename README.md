@@ -1,6 +1,6 @@
 КАК УСТАНОВИТЬ МОЙ ПРОЕКТ
 
-1. git clone https://github.com/Maksfin/template.git site
+1. git clone https://github.com/Maksfin/Neva_ATC.git site
 
 2. cd site
 
