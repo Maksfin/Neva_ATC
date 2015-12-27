@@ -61,6 +61,17 @@
 	line-height: 56px;
 }
 
+/*---- НАВИГАЦИЯ ----*/
+.navigation {
+	&.active {
+		.dropdown__list {
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
 .navigation__list {
 	height: 60px;
 	margin: 0 60px;
@@ -70,6 +81,7 @@
 		content:'';
 		display: inline-block;
 		width: 100%;
+		height: 0;
 	}
 }
 
@@ -91,15 +103,88 @@
 
 	&:first-child:before {
 			display: none;
-	}	
+	}
 }
 
 .navigation__link {
+	position: relative;
 	line-height: 60px;
 	display: block;
 	color: $white;
 	font-size: 18px;
 	text-decoration:none;
 	text-transform: uppercase;
+
+	&:hover {
+		color: #fdcf17;
+		@include transition(.6s);
+	}
+
+	&.active {
+		color: #fdcf17;
+	}
+}
+
+/*Простой ДРОПДАУН по наведению*/
+// .navigation__item_projects {
+// 	&:hover {
+// 		.dropdown__list {
+// 			left: 0;
+// 			right: 0;
+// 			opacity: 1;
+// 		}
+// 	}
+// }
+
+
+/*---- ДРОПДАУН ----*/
+.dropdown__list {
+	position: absolute;
+	left: -9999px;
+	right: auto;
+	opacity: 0;
+	top:100%;
+	background: #fdcf17;
+	height: 60px;
+	text-align: justify;
+	padding: 0 30px;
+	z-index:1;
+	@include transition(.3s);
+
+	&:before {
+		content:"";
+    	display: block;
+   	position: absolute;
+    	border: 15px solid transparent;
+    	top: -14px;
+    	left: 38%;
+    	border-bottom-color: #fdcf17;
+    	border-top-width: 0px;
+	}
+
+	&:after {
+		content: '';
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+.dropdown__item {
+	@include inlineblock(middle);
+	padding: 0 10px;
+
+}
+
+.dropdown__link {
+	display: block;
+	color: $blue;
+	font-size: 18px;
+	line-height: 60px;
+	font-family: $font-light;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 

@@ -11,7 +11,20 @@ header.header
 					.header__title-bottom Автоматика Телемеханика Связь
 	.header__bottom
 		.container
-			+ul('navigation', navigation , 0, false)
-
-
-
+			nav.navigation
+				ul.navigation__list
+					li.navigation__item.navigation__item_home
+						a(href="#" title="Главная").navigation__link Главная
+					li.navigation__item.navigation__item_projects
+						a(href="#" title="Наши проекты").navigation__link Наши проекты
+					li.navigation__item.navigation__item_company
+						a(href="#" title="О Компании").navigation__link О Компании
+					li.navigation__item.navigation__item_contacts
+						a(href="#" title="Контакты").navigation__link Контакты
+				ul.dropdown__list
+						- for (var i = 1; i < 10; i++)
+							li.dropdown__item
+								a(href="#" title="200#{i} год").dropdown__link 200#{i}
+						- for (var i = 10; i < 17; i++)
+							li.dropdown__item
+									a(href="#" title="20#{i} год").dropdown__link 20#{i}		

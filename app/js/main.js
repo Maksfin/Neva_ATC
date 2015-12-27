@@ -15,6 +15,18 @@ $(document).ready(function() {
 	 	speed: 800,
 	});
 
+	(function() {
+		var 
+			nav = $('.navigation');
+			navLink = $('.navigation__item_projects').find('.navigation__link');
+
+		$('.navigation__item_projects, .dropdown__list').on('mouseenter', function() {
+			nav.add(navLink).addClass('active');
+		}).on('mouseleave', function() {
+			nav.add(navLink).removeClass('active');
+		});
+	})();
+
 }); // --> end
 
 
@@ -29,7 +41,7 @@ var Maps = (function() {
 	    new google.maps.Point(0, 0),
 	    new google.maps.Point(0, 32)); // Теневое изображение
 	 
-	    var image = new google.maps.MarkerImage('/img/elements/marker.png',
+	    var image = new google.maps.MarkerImage('/img/elements/marker.svg',
 	      new google.maps.Size(30, 30),
 	      new google.maps.Point(0, 0),
 	      new google.maps.Point(0, 32)); //изображение маркера
